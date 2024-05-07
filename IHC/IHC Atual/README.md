@@ -15,7 +15,10 @@
   <img src="3.png">
 </details>
 
-### 4 - Consistência e Padrões
+<details>
+  <summary>4 - Consistência e Padrões</summary>
+  <img src="4.png">
+</details>
 
 <details>
   <summary>5 - Prevenção de erros</summary>
@@ -29,7 +32,10 @@
   <img src="7.png">
 </details>
 
-### 8 - Design Estético e Minimalista
+<details>
+  <summary>8 - Design Estético e Minimalista</summary>
+  <img src="">
+</details>
 
 ### 9 - Ajude os usuários a reconhecer, diagnosticar e se recuperar de erros
 
