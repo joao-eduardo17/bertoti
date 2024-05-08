@@ -25,7 +25,10 @@
   <img src="5.png">
 </details>
 
-### 6 - Reconhecimento em vez de lembrança
+<details>
+  <summary>6 - Reconhecimento em vez de lembrança</summary>
+  <img src="6.png">
+</details>
 
 <details>
   <summary>7 - Flexibilidade e eficiência de uso</summary>
