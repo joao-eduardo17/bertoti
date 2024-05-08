@@ -34,9 +34,12 @@
 
 <details>
   <summary>8 - Design Estético e Minimalista</summary>
-  <img src="">
+  <img src="8.png">
 </details>
 
-### 9 - Ajude os usuários a reconhecer, diagnosticar e se recuperar de erros
+<details>
+  <summary>9 - Ajude os usuários a reconhecer, diagnosticar e se recuperar de erros</summary>
+  <img src="9.png">
+</details>
 
 ### 10 - Ajuda e Documentação
