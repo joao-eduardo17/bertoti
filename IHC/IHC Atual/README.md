@@ -45,4 +45,7 @@
   <img src="9.png">
 </details>
 
-### 10 - Ajuda e Documentação
+<details>
+  <summary>10 - Ajuda e Documentação</summary>
+  <img src="10.png">
+</details>
