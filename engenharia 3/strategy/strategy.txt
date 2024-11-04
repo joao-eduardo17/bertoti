@@ -1,58 +1,32 @@
-import java.util.ArrayList;
-import java.util.List;
-
-
-interface ClienteObserver {
-    void update(String mensagem);
-}
-
-
-public class Cliente implements ClienteObserver {
-    private String nome;
-
-    public Cliente(String nome) {
-        this.nome = nome;
-    }
-
-    @Override
-    public void update(String mensagem) {
-        System.out.println(nome + " recebeu a mensagem: " + mensagem);
-    }
-
-    public String getNome() {
-        return nome;
-    }
-}
-
-
 public class Banco {
-    private List<ClienteObserver> clientes;
-    private String taxaJuros;
+    private CalculaJuros estrategia;
 
-    public Banco() {
-        clientes = new ArrayList<>();
+    public void setEstrategia(CalculaJuros estrategia) {
+        this.estrategia = estrategia;
     }
 
-    public void registrarCliente(ClienteObserver cliente) {
-        clientes.add(cliente);
-    }
-
-    public void removerCliente(ClienteObserver cliente) {
-        clientes.remove(cliente);
-    }
-
-    public void notificarClientes() {
-        for (ClienteObserver cliente : clientes) {
-            cliente.update("Nova taxa de juros: " + taxaJuros);
+    public double calcularJuros(double valor, double taxa, int tempo) {
+        if (estrategia == null) {
+            throw new IllegalStateException("Nenhuma estratégia definida");
         }
+        return estrategia.calcularJuros(valor, taxa, tempo);
     }
+}
 
-    public void setTaxaJuros(String taxaJuros) {
-        this.taxaJuros = taxaJuros;
-        notificarClientes();
+public interface CalculaJuros {
+    double calcularJuros(double valor, double taxa, int tempo);
+}
+
+public class JurosSimples implements CalculaJuros {
+    @Override
+    public double calcularJuros(double valor, double taxa, int tempo) {
+        return valor * (1 + taxa * tempo);
     }
+}
 
-    public String getTaxaJuros() {
-        return taxaJuros;
+public class JurosCompostos implements CalculaJuros {
+    @Override
+    public double calcularJuros(double valor, double taxa, int tempo) {
+        return valor * Math.pow(1 + taxa, tempo);
     }
 }
